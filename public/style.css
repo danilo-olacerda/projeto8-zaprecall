@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap');
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: #FB6B6B;
+    font-family: 'Righteous'
+}
+.root {
+    height: 100%;
+}
+.screen1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.screen1 h1, .screen2 span p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.screen1 img {
+    margin-bottom: 13px;
+    height: 161px;
+    width: 136px;
+}
+.screen1 button {
+    background: #FFFFFF;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 16px 65px;
+}
+.screen1 button p {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #D70900;
+}
+.screen2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.screen2 span {
+    margin-top: 42px;
+    display: flex;
+    margin-bottom: 51px;
+}
+.screen2 span img {
+    width: 52px;
+    height: 60px;
+    margin-right: 20px;
+}
+.question-card {
+    padding: 23px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+.question-card ion-icon {
+    font-size: 23px;
+}
+.question-card p {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+.questions-done {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 70px;
+}
+.questions-done p {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}
+.questions div:last-child{
+    margin-bottom: 95px;
+}
