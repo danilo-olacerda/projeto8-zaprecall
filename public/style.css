@@ -89,6 +89,8 @@ body {
     color: #333333;
 }
 .questions-done {
+    padding-bottom: 10px;
+    flex-direction: column;
     position: fixed;
     bottom: 0;
     display: flex;
@@ -97,9 +99,10 @@ body {
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     width: 100%;
-    height: 70px;
+    min-height: 70px;
 }
 .questions-done p {
+    margin-top: 9px;
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
@@ -165,4 +168,54 @@ body {
 }
 .zap-button {
     background: #2FBE34;
+}
+.done p{
+    text-decoration-line: line-through;
+}
+ion-icon[name="close-circle"], .close-circle p{
+    color: #FF3030;
+}
+ion-icon[name="checkmark-circle"], .checkmark-circle p {
+    color: #2FBE34;
+}
+ion-icon[name="help-circle"], .help-circle p{
+    color: #FF922E;
+}
+.orders {
+    display: flex;
+}
+.orders ion-icon {
+    font-size: 23px;
+    margin-top: 6px;
+}
+.final span {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+}
+.final h3 {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #333333;
+}
+.final span p {
+    text-align: center;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+    margin-bottom: 14px;
+    margin-top: 0;
 }

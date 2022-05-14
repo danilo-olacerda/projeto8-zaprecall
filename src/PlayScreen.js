@@ -1,6 +1,7 @@
 import Question from "./Question";
 import React from "react";
 import Final from "./Final";
+import Order from "./Order";
 
 let questions = [
     {pergunta: "O que é JSX?", resposta: "Uma extensão de linguagem do JavaScript"}, 
@@ -19,6 +20,7 @@ export default function PlayScreen() {
 
     const [numberOfQuestions, setNumberOfQuestions] = React.useState(questions.length);
     const [numberOfZaps, setNumberOfZaps] = React.useState(0);
+    const [order, setOrder] = React.useState([]);
 
     return (
         <div className="screen2">
@@ -28,12 +30,15 @@ export default function PlayScreen() {
             </span>
 
             <div className="questions">
-                {questions.map((props, i) => <Question key={i} i={i} pergunta={props.pergunta} resposta={props.resposta} setNumberOfZaps={setNumberOfZaps} numberOfZaps={numberOfZaps}/>)}
+                {questions.map((props, i) => <Question key={i} i={i} pergunta={props.pergunta} resposta={props.resposta} setNumberOfZaps={setNumberOfZaps} numberOfZaps={numberOfZaps} order={order} setOrder={setOrder}/>)}
             </div>
 
             <div className="questions-done">
-                {/* Criar com componente, para resetar somente o componente e não toda essa função*/}
-                {numberOfZaps!==numberOfQuestions ? <p>{numberOfZaps}/{numberOfQuestions} CONCLUÍDOS</p> : <Final />}
+                {numberOfZaps===numberOfQuestions ? <Final order={order}/>: <></>}
+                <p>{numberOfZaps}/{numberOfQuestions} CONCLUÍDOS</p>
+                <div className="orders">
+                    {order.map((props, i) => <Order key={i} icon={props}/>)}
+                </div>
             </div>
         </div>
     )
