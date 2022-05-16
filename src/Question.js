@@ -1,15 +1,6 @@
 import React from "react"
 export default function Question ({pergunta, resposta, i, setNumberOfZaps, numberOfZaps, order, setOrder}) {
 
-
-    //VARIAVEL DE ESTADO 1 2 3 PARA SABER QUAL ESTAGIO DA PERGUNTA ESTÁ
-    //CHAMAR A FUNÇÃO ANONIMA () => FUNCAO* (1/2/3)
-    //CRIAR FUNCAO* COM CONDIÇÃO SE 1 SE 2 OU SE 3
-    //CRIAR FUNÇÃO QUE CONTABILIZA OS PONTOS
-
-    //FAZER ARRAY COM SPREAD PARA OS ACERTOS EX: [... CERTO, ERRADO];
-    //SE O ARRAY DE PERGUNTAS.LENGTH FOR DO TAMANHO DO ARRAY ACIMA SAIR O RESULTADO  NO COMPONENTE
-
     const [cardSide, setCardSide] = React.useState(1);
     const [option, setOption] = React.useState();
 
@@ -22,7 +13,6 @@ export default function Question ({pergunta, resposta, i, setNumberOfZaps, numbe
         }
     }
 
-    function Side () {
         if (cardSide===1) {
             return (
                 <div className="question-card" onClick={() => turnCard(2)}>
@@ -64,9 +54,4 @@ export default function Question ({pergunta, resposta, i, setNumberOfZaps, numbe
                 </div>
             )
         }
-    }
-
-    return (
-         <Side />
-    )
 }

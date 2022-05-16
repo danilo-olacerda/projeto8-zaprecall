@@ -1,11 +1,15 @@
-export default function Final ({order}) {
+export default function Final ({order, showButton}) {
 
-    let state;
+    let state='';
+    let numberOfRights=0;
     for (let i=0; i<order.length; i++){
-        if (order[i]==="close-circle"){
-            state="bad";
-            break;
+        if (order[i]==="checkmark-circle"){
+            numberOfRights++;
         }
+    }
+
+    if (numberOfRights<showButton) {
+        state="bad";
     }
 
     function Bad () {
@@ -14,9 +18,9 @@ export default function Final ({order}) {
                 <span>
                     <p>😢 Putz...</p>
                 </span>
-                    <h3>Ainda faltam alguns...
+                <h3>Ainda faltam alguns...
                     Mas não desanime!
-                    </h3>
+                </h3>
             </div>
         )
     }
@@ -27,7 +31,7 @@ export default function Final ({order}) {
                 <span>
                     <p>🥳 Parabéns!</p>
                 </span>
-                    <h3>Você não esqueceu de nenhum flashcard!
+                    <h3>Você bateu sua meta de flashcards!
                     </h3>
             </div>
         )
